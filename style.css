@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+#myVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.selection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.selection label{
+    color: white;
+    margin-right: 10px;
+}
+
+.selection select{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.legends{
+    color: white;
+    margin: 20px;
+}
+
+.legends .legendInfo{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.container1{
+    width: 350px;
+    height: 400px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/*Finding A = P(1 + rt)*/
+
+.container1 .inputs1{
+    margin-left: 80px;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+.inputs1 input{
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.inputs1 button{
+    padding: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+#reset_A{
+    margin-left: 40px;
+}
+
+.inputs1 button:hover{
+    background-color: green;
+    color: white;
+    transition: .5s;
+}
+
+.result{
+    width: 300px;
+    margin-left: -55px;
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
+
+.result h1{
+    text-align: center;
+}
+
+/*Finding P = A/(1 + rt)*/
+.container1 .inputs2{
+    margin-left: 80px;
+    padding-top: 15px;
+    justify-content: center;
+    display: none;
+}
+
+.inputs2 input{
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.inputs2 button{
+    padding: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+#reset_P{
+    margin-left: 40px;
+}
+
+.inputs2 button:hover{
+    background-color: green;
+    color: white;
+    transition: .5s;
+}
+
+.result_P{
+    width: 300px;
+    margin-left: -55px;
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
+
+.result_P h1{
+    text-align: center;
+}
+
+/*Finding R = (1/t)(A/P - 1)*/
+.container1 .inputs3{
+    margin-left: 80px;
+    padding-top: 15px;
+    justify-content: center;
+    display: none;
+}
+
+.inputs3 input{
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.inputs3 button{
+    padding: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+#reset_r{
+    margin-left: 40px;
+}
+
+.inputs3 button:hover{
+    background-color: green;
+    color: white;
+    transition: .5s;
+}
+
+.result_r{
+    width: 300px;
+    margin-left: -55px;
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
+
+.result_r h1{
+    text-align: center;
+}
+
+/*t = (1/r)(A/P - 1)*/
+.container1 .inputs4{
+    margin-left: 80px;
+    padding-top: 15px;
+    justify-content: center;
+    display: none;
+}
+
+.inputs4 input{
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.inputs4 button{
+    padding: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+#reset_t{
+    margin-left: 40px;
+}
+
+.inputs4 button:hover{
+    background-color: green;
+    color: white;
+    transition: .5s;
+}
+
+.result_t{
+    width: 300px;
+    margin-left: -55px;
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
+
+.result_t h1{
+    text-align: center;
+}
+
+#logo{
+    font-family: papyrus;
+    margin-left: 20px;
+    background-image: linear-gradient(to right, white, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 300%;
+    background-position: -100%;
+    color: transparent;
+    font-size: 20px;
+    animation-name: logos;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes logos{
+    from{
+        background-position: 0%;
+    }
+    to{
+        background-position: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    #myVideo{
+        display: none;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="VideoPortfolio.mp4" type="video/mp4">
+    </video>
+
+    <h1 id = "logo">FREAK</h1>
+
+    <div class="selection">
+        <label for="simpleMethod">Choose Method:</label>
+        <select id="simpleMethod">
+            <option value="A">A = P*(1+r*t)</option>
+            <option value="P">P = A/(1 + r*t)</option>
+            <option value="R">R = (1/t)*(A/P - 1)</option>
+            <option value="t">t = (1/r)*(A/P - 1)</option>
+        </select>
+    </div>
+
+    <div class="container1">
+        <!--Finding A = P(1 + rt)-->
+        <div class="inputs1" id="inputs1">
+            <form id="myForm">
+                <input type="number" id="principal_A" placeholder="Enter P($)" required>
+                <input type="number" id="rateDecimal_A" placeholder="Enter R(%)" required>
+                <input type="number" id="time_A" placeholder="Enter t(years)" required><br>
+                <button id="calculate_A" type="button" onclick="calculateA()">Calculate</button>
+                <button type="reset" id="reset_A" onclick="resetA()">Reset</button>
+                <div class="result">
+                    <h1 id="result_A">A = ?</h1>
+                </div>
+            </form> 
+        </div>
+        <!--Finding P = A/(1 + rt)-->
+        <div class="inputs2" id="inputs2">
+            <form id="myForm">
+                <input type="number" id="accrued_P" placeholder="Enter A($)" required>
+                <input type="number" id="rateDecimal_P" placeholder="Enter R(%)" required>
+                <input type="number" id="time_P" placeholder="Enter t(years)" required><br>
+                <button id="calculate_P" type="button" onclick="calculateP()">Calculate</button>
+                <button type="reset" id="reset_P" onclick="resetP()">Reset</button>
+                <div class="result_P">
+                    <h1 id="result_P">P = ?</h1>
+                </div>
+            </form> 
+        </div>
+        <!--Finding R = (1/t)(A/P - 1)-->
+        <div class="inputs3" id="inputs3">
+            <form id="myForm">
+                <input type="number" id="accrued_r" placeholder="Enter A($)" required>
+                <input type="number" id="principal_r" placeholder="Enter P($)" required>
+                <input type="number" id="time_r" placeholder="Enter t(years)" required><br>
+                <button id="calculate_r" type="button" onclick="calculateR()">Calculate</button>
+                <button type="reset" id="reset_r" onclick="resetR()">Reset</button>
+                <div class="result_r">
+                    <h1 id="result_r">R = ?</h1>
+                </div>
+            </form> 
+        </div>
+        <!--t = (1/r)(A/P - 1)-->
+        <div class="inputs4" id="inputs4">
+            <form id="myForm">
+                <input type="number" id="accrued_t" placeholder="Enter A($)" required>
+                <input type="number" id="principal_t" placeholder="Enter P($)" required>
+                <input type="number" id="rate_t" placeholder="Enter R(per year)" required><br>
+                <button id="calculate_t" type="button" onclick="calculateT()">Calculate</button>
+                <button type="reset" id="reset_t" onclick="resetT()">Reset</button>
+                <div class="result_t">
+                    <h1 id="result_t">t = ?</h1>
+                </div>
+            </form> 
+        </div>
+    </div>
+
+    <div class="legends">
+        <h2>Legends:</h2>
+            <div class="legendInfo">
+                <h3>A - Total Accrued Amount</h3>
+                <h3>P - Principal Amount</h3>
+                <h3>I - Interest Amount</h3>
+                <h3>r - Rate of Interest per year in decimal</h3>
+                <h3>R - Rate of Interest per year as a percent</h3>
+                <h3>t - Time Period Involved Years</h3>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
